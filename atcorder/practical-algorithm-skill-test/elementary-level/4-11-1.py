@@ -1,15 +1,13 @@
+from collections import Counter
+
 # input
 S = list(input())
 
-# count
-na = S.count('a')
-nb = S.count('b')
-nc = S.count('c')
+# counter dictionary
+c = Counter(S)
 
-mx = max(na, nb, nc)
-if mx == na:
-	print('a')
-elif mx == nb:
-	print('b')
-elif mx == nc:
-	print('c')
+# extract most common alphabet
+ans = c.most_common()[0][0]
+
+# print answer
+print(ans)
