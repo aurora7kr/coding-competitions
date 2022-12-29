@@ -6,8 +6,8 @@ S = list(input())
 # counter dictionary
 c = Counter(S)
 
-# extract most common alphabet
-ans = c.most_common()[0][0]
+# sort to most common alphabet order
+ans = c.most_common()[0]
 
 # print answer
-print(ans)
+print(ans[0])
